@@ -30,6 +30,8 @@ namespace NetCoreMongo
             services.AddIdentity<ApplicationUser, ApplicationRole>()
               .AddMongoDbStores<ApplicationUser, ApplicationRole, Guid>(
              mongoDbSettings.ConnectionString, mongoDbSettings.Name);
+
+
             services.AddControllersWithViews();
         }
 
